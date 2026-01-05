@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SNT - Le Web - M. Orlandini</title>
+		<link
+			rel="icon"
+			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>"
+		/>
+		<link rel="stylesheet" href="style_index.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://unpkg.com/lucide@latest"></script>
+	</head>
+	<body>
+		<canvas id="canvas-bg"></canvas>
+
+		<header class="main-header">
+			<div class="header-content">
+				<div class="level-badge">Classe de 2nde GT</div>
+				<h1 class="title-main">SNT<span> : Le Web</span></h1>
+				<h2 class="subtitle-main">
+					Introduction à la création de site internet
+				</h2>
+				<div class="teacher-badge">
+					<i data-lucide="graduation-cap"></i>
+					Professeur : M. Orlandini
+				</div>
+			</div>
+		</header>
+
+		<main class="container">
+			<section class="intro-card">
+				<p>
+					Bienvenue dans ce module dédié au Web. Nous allons explorer comment
+					fonctionne Internet et apprendre à construire nos propres pages pas à
+					pas.
+				</p>
+			</section>
+
+			<div class="sessions-grid">
+				<a href="cours_seance1.html" class="session-card active">
+					<div class="card-glass"></div>
+					<div class="session-number">01</div>
+					<div class="session-info">
+						<h3>Découverte & HTML</h3>
+						<p>Les bases du langage de structure.</p>
+					</div>
+					<span class="status">Disponible</span>
+					<i data-lucide="chevron-right" class="arrow"></i>
+				</a>
+
+				<div class="session-card disabled">
+					<div class="card-glass"></div>
+					<div class="session-number">02</div>
+					<div class="session-info">
+						<h3>Structure & Contenu</h3>
+						<p>Bientôt disponible</p>
+					</div>
+					<span class="status">À venir</span>
+				</div>
+
+				<div class="session-card disabled">
+					<div class="card-glass"></div>
+					<div class="session-number">03</div>
+					<div class="session-info">
+						<h3>Style & CSS</h3>
+						<p>Bientôt disponible</p>
+					</div>
+				</div>
+				<div class="session-card disabled">
+					<div class="card-glass"></div>
+					<div class="session-number">04</div>
+					<div class="session-info">
+						<h3>Mise en page</h3>
+						<p>Bientôt disponible</p>
+					</div>
+				</div>
+				<div class="session-card disabled">
+					<div class="card-glass"></div>
+					<div class="session-number">05</div>
+					<div class="session-info">
+						<h3>Images & Médias</h3>
+						<p>Bientôt disponible</p>
+					</div>
+				</div>
+				<div class="session-card disabled">
+					<div class="card-glass"></div>
+					<div class="session-number">06</div>
+					<div class="session-info">
+						<h3>Interactivité JS</h3>
+						<p>Bientôt disponible</p>
+					</div>
+				</div>
+				<div class="session-card disabled">
+					<div class="card-glass"></div>
+					<div class="session-number">07</div>
+					<div class="session-info">
+						<h3>Projet Final</h3>
+						<p>Bientôt disponible</p>
+					</div>
+				</div>
+				<div class="session-card disabled">
+					<div class="card-glass"></div>
+					<div class="session-number">08</div>
+					<div class="session-info">
+						<h3>Évaluation</h3>
+						<p>Bientôt disponible</p>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="main-footer">
+			<p>© 2026 — <span>Cours SNT</span> — Thème : Le Web</p>
+		</footer>
+
+		<script src="script.js"></script>
+		<script>
+			lucide.createIcons();
+		</script>
+	</body>
+</html>

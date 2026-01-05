@@ -528,3 +528,53 @@ body {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* ----------------------------------------------------------------- */
+
+
+/* Bouton Home Moderne */
+.btn-home {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.8rem 1.2rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 14px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-home i {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-home:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px) translateX(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent-color);
+}
+
+/* Adaptation Mobile */
+@media (max-width: 768px) {
+    .btn-home {
+        top: 1rem;
+        left: 1rem;
+        padding: 0.6rem 1rem;
+    }
+    .btn-home span {
+        display: none; /* On ne garde que l'icône sur petit écran */
+    }
+}

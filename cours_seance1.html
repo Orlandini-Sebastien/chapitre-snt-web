@@ -1,111 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNT 2GT - Séance 1 : Découverte du Web et HTML</title>
-    <link rel="stylesheet" href="style_cours_seance1.css">
-</head>
-<body>
-    <header class="main-header">
-        <div class="header-content">
-            <h1 class="title-main">Élaboration d'un Site Web Interactif</h1>
-            <div class="session-info">
-                <span class="session-number">Séance 1/8</span>
-                <span class="session-title">Découverte du Web et HTML</span>
-            </div>
-        </div>
-        <div class="level-badge">2nde GT - SNT</div>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SNT 2GT - Séance 1 : Découverte du Web et HTML</title>
+		<link rel="stylesheet" href="style_cours_seance1.css" />
+	</head>
+	<body>
+		<script src="https://unpkg.com/lucide@latest"></script>
 
-    <div class="time-indicator">
-        <span class="time-course">📚 Cours : 15 min</span>
-        <span class="time-practice">⚡ Pratique : 45 min</span>
-    </div>
+		<a href="index.html" class="btn-home">
+			<i data-lucide="home"></i>
+			<span>Accueil</span>
+		</a>
 
-    <main class="course-content">
-        <section id="web-intro" class="content-section">
-            <div class="section-header">
-                <h2>🌐 Le Web : Un réseau de pages connectées</h2>
-                <span class="duration">5 min</span>
-            </div>
-            
-            <div class="simple-concept">
-                <div class="web-visual">
-                    <div class="page-node">
-                        <span>Page 1</span>
-                    </div>
-                    <div class="link-arrow">→</div>
-                    <div class="page-node">
-                        <span>Page 2</span>
-                    </div>
-                    <div class="link-arrow">→</div>
-                    <div class="page-node">
-                        <span>Page 3</span>
-                    </div>
-                </div>
-                <p><strong>Le Web</strong> = des pages reliées par des <strong>liens</strong> que vous consultez avec un <strong>navigateur</strong></p>
-            </div>
+		<script>
+			lucide.createIcons();
+		</script>
+		<header class="main-header">
+			<div class="header-content">
+				<h1 class="title-main">Élaboration d'un Site Web Interactif</h1>
+				<div class="session-info">
+					<span class="session-number">Séance 1/8</span>
+					<span class="session-title">Découverte du Web et HTML</span>
+				</div>
+			</div>
+			<div class="level-badge">2nde GT - SNT</div>
+		</header>
 
-            <div class="key-trio">
-                <div class="key-item">
-                    <div class="key-icon">🏠</div>
-                    <h4>Site Web</h4>
-                    <p>Plusieurs pages liées</p>
-                </div>
-                <div class="key-item">
-                    <div class="key-icon">📄</div>
-                    <h4>Page Web</h4>
-                    <p>Un document</p>
-                </div>
-                <div class="key-item">
-                    <div class="key-icon">🔗</div>
-                    <h4>Lien</h4>
-                    <p>Connexion entre pages</p>
-                </div>
-            </div>
-        </section>
+		<div class="time-indicator">
+			<span class="time-course">📚 Cours : 15 min</span>
+			<span class="time-practice">⚡ Pratique : 45 min</span>
+		</div>
 
-        <section id="html-intro" class="content-section">
-            <div class="section-header">
-                <h2>📝 HTML : Le langage des pages web</h2>
-                <span class="duration">10 min</span>
-            </div>
-            
-            <div class="html-concept">
-                <h3>HTML = HyperText Markup Language</h3>
-                <p>C'est le <strong>langage</strong> qui permet de créer des pages web</p>
-                
-                <div class="analogy-simple">
-                    <div class="analogy-item">
-                        <span class="analogy-emoji">🏗️</span>
-                        <div>
-                            <strong>HTML</strong><br>
-                            <small>Structure de la page</small>
-                        </div>
-                    </div>
-                    <div class="analogy-plus">+</div>
-                    <div class="analogy-item">
-                        <span class="analogy-emoji">🎨</span>
-                        <div>
-                            <strong>CSS</strong><br>
-                            <small>Style et couleurs</small>
-                        </div>
-                    </div>
-                    <div class="analogy-plus">+</div>
-                    <div class="analogy-item">
-                        <span class="analogy-emoji">⚡</span>
-                        <div>
-                            <strong>JavaScript</strong><br>
-                            <small>Interactivité</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
+		<main class="course-content">
+			<section id="web-intro" class="content-section">
+				<div class="section-header">
+					<h2>🌐 Le Web : Un réseau de pages connectées</h2>
+					<span class="duration">5 min</span>
+				</div>
 
-            <div class="code-simple">
-                <h4>Votre première page HTML :</h4>
-                <pre class="code-block"><code>&lt;!DOCTYPE html&gt;
+				<div class="simple-concept">
+					<div class="web-visual">
+						<div class="page-node">
+							<span>Page 1</span>
+						</div>
+						<div class="link-arrow">→</div>
+						<div class="page-node">
+							<span>Page 2</span>
+						</div>
+						<div class="link-arrow">→</div>
+						<div class="page-node">
+							<span>Page 3</span>
+						</div>
+					</div>
+					<p>
+						<strong>Le Web</strong> = des pages reliées par des
+						<strong>liens</strong> que vous consultez avec un
+						<strong>navigateur</strong>
+					</p>
+				</div>
+
+				<div class="key-trio">
+					<div class="key-item">
+						<div class="key-icon">🏠</div>
+						<h4>Site Web</h4>
+						<p>Plusieurs pages liées</p>
+					</div>
+					<div class="key-item">
+						<div class="key-icon">📄</div>
+						<h4>Page Web</h4>
+						<p>Un document</p>
+					</div>
+					<div class="key-item">
+						<div class="key-icon">🔗</div>
+						<h4>Lien</h4>
+						<p>Connexion entre pages</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="html-intro" class="content-section">
+				<div class="section-header">
+					<h2>📝 HTML : Le langage des pages web</h2>
+					<span class="duration">10 min</span>
+				</div>
+
+				<div class="html-concept">
+					<h3>HTML = HyperText Markup Language</h3>
+					<p>
+						C'est le <strong>langage</strong> qui permet de créer des pages web
+					</p>
+
+					<div class="analogy-simple">
+						<div class="analogy-item">
+							<span class="analogy-emoji">🏗️</span>
+							<div>
+								<strong>HTML</strong><br />
+								<small>Structure de la page</small>
+							</div>
+						</div>
+						<div class="analogy-plus">+</div>
+						<div class="analogy-item">
+							<span class="analogy-emoji">🎨</span>
+							<div>
+								<strong>CSS</strong><br />
+								<small>Style et couleurs</small>
+							</div>
+						</div>
+						<div class="analogy-plus">+</div>
+						<div class="analogy-item">
+							<span class="analogy-emoji">⚡</span>
+							<div>
+								<strong>JavaScript</strong><br />
+								<small>Interactivité</small>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="code-simple">
+					<h4>Votre première page HTML :</h4>
+					<pre class="code-block"><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;title&gt;Ma page&lt;/title&gt;
@@ -115,86 +131,90 @@
     &lt;p&gt;Bienvenue sur ma page.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-            </div>
+				</div>
 
-            <div class="tags-essential">
-                <h4>Les balises indispensables :</h4>
-                <div class="tags-mini-grid">
-                    <div class="mini-tag">
-                        <code>&lt;h1&gt;</code>
-                        <span>Titre</span>
-                    </div>
-                    <div class="mini-tag">
-                        <code>&lt;p&gt;</code>
-                        <span>Paragraphe</span>
-                    </div>
-                    <div class="mini-tag">
-                        <code>&lt;strong&gt;</code>
-                        <span>Gras</span>
-                    </div>
-                    <div class="mini-tag">
-                        <code>&lt;br&gt;</code>
-                        <span>Nouvelle ligne</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+				<div class="tags-essential">
+					<h4>Les balises indispensables :</h4>
+					<div class="tags-mini-grid">
+						<div class="mini-tag">
+							<code>&lt;h1&gt;</code>
+							<span>Titre</span>
+						</div>
+						<div class="mini-tag">
+							<code>&lt;p&gt;</code>
+							<span>Paragraphe</span>
+						</div>
+						<div class="mini-tag">
+							<code>&lt;strong&gt;</code>
+							<span>Gras</span>
+						</div>
+						<div class="mini-tag">
+							<code>&lt;br&gt;</code>
+							<span>Nouvelle ligne</span>
+						</div>
+					</div>
+				</div>
+			</section>
 
-        <section id="pratique-time" class="content-section practice-section">
-            <div class="section-header">
-                <h2>⚡ À vous de jouer !</h2>
-                <span class="duration">45 min</span>
-            </div>
-            
-            <div class="activity-card">
-                <div class="activity-header">
-                    <h3>🎯 Activité 1 : Ma première page web</h3>
-                    <div class="activity-time">45 min</div>
-                </div>
-                
-                <div class="activity-content">
-                    <p>Vous allez créer votre toute première page web ! Pas de panique, on commence simple.</p>
-                    
-                    <div class="activity-steps">
-                        <div class="step">
-                            <span class="step-num">1</span>
-                            <span>Ouvrir le Bloc-notes</span>
-                        </div>
-                        <div class="step">
-                            <span class="step-num">2</span>
-                            <span>Écrire le code HTML</span>
-                        </div>
-                        <div class="step">
-                            <span class="step-num">3</span>
-                            <span>Sauvegarder en .html</span>
-                        </div>
-                        <div class="step">
-                            <span class="step-num">4</span>
-                            <span>Ouvrir dans le navigateur</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="activity-goal">
-                    <strong>Objectif :</strong> Créer une page qui parle de vous avec un titre, des paragraphes et du texte en gras.
-                </div>
-            </div>
-            
-            <div class="tools-needed">
-                <h4>🔧 Outils nécessaires :</h4>
-                <ul>
-                    <li>Bloc-notes (ou Notepad++)</li>
-                    <li>Navigateur web (Chrome, Firefox...)</li>
-                    <li>Fiche activité distribuée</li>
-                </ul>
-            </div>
-        </section>
-    </main>
+			<section id="pratique-time" class="content-section practice-section">
+				<div class="section-header">
+					<h2>⚡ À vous de jouer !</h2>
+					<span class="duration">45 min</span>
+				</div>
 
-    <footer class="course-footer">
-        <div class="next-session">
-            <p>Prochaine séance : <strong>HTML - Structure et contenu</strong></p>
-        </div>
-    </footer>
-</body>
+				<div class="activity-card">
+					<div class="activity-header">
+						<h3>🎯 Activité 1 : Ma première page web</h3>
+						<div class="activity-time">45 min</div>
+					</div>
+
+					<div class="activity-content">
+						<p>
+							Vous allez créer votre toute première page web ! Pas de panique,
+							on commence simple.
+						</p>
+
+						<div class="activity-steps">
+							<div class="step">
+								<span class="step-num">1</span>
+								<span>Ouvrir le Bloc-notes</span>
+							</div>
+							<div class="step">
+								<span class="step-num">2</span>
+								<span>Écrire le code HTML</span>
+							</div>
+							<div class="step">
+								<span class="step-num">3</span>
+								<span>Sauvegarder en .html</span>
+							</div>
+							<div class="step">
+								<span class="step-num">4</span>
+								<span>Ouvrir dans le navigateur</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="activity-goal">
+						<strong>Objectif :</strong> Créer une page qui parle de vous avec un
+						titre, des paragraphes et du texte en gras.
+					</div>
+				</div>
+
+				<div class="tools-needed">
+					<h4>🔧 Outils nécessaires :</h4>
+					<ul>
+						<li>Bloc-notes (ou Notepad++)</li>
+						<li>Navigateur web (Chrome, Firefox...)</li>
+						<li>Fiche activité distribuée</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+		<footer class="course-footer">
+			<div class="next-session">
+				<p>Prochaine séance : <strong>HTML - Structure et contenu</strong></p>
+			</div>
+		</footer>
+	</body>
 </html>
