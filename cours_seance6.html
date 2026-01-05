@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNT 2GT - Séance 6 : Introduction au JavaScript</title>
+    <link rel="stylesheet" href="style_cours_seance6.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="title-main">Introduction au JavaScript</h1>
+            <div class="session-info">
+                <span class="session-number">Séance 6/8</span>
+                <span class="session-title">Rendre les pages interactives</span>
+            </div>
+        </div>
+        <div class="level-badge">2nde GT - SNT</div>
+    </header>
+
+    <div class="time-indicator">
+        <span class="time-course">📚 Cours : 20 min</span>
+        <span class="time-practice">⚡ Pratique : 40 min</span>
+    </div>
+
+    <main class="course-content">
+        <section id="js-intro" class="content-section">
+            <div class="section-header">
+                <h2>⚡ JavaScript : Le langage de l'interactivité</h2>
+                <span class="duration">8 min</span>
+            </div>
+            
+            <div class="js-concept">
+                <h3>Qu'est-ce que JavaScript ?</h3>
+                <p>JavaScript rend les pages web <strong>interactives</strong> et <strong>dynamiques</strong></p>
+                
+                <div class="languages-comparison">
+                    <div class="language-card">
+                        <div class="language-icon">🏗️</div>
+                        <h4>HTML</h4>
+                        <p class="language-role">Structure</p>
+                        <p>Contenu et organisation</p>
+                        <div class="language-example">
+                            <code>&lt;button&gt;Cliquer&lt;/button&gt;</code>
+                        </div>
+                    </div>
+                    
+                    <div class="language-card">
+                        <div class="language-icon">🎨</div>
+                        <h4>CSS</h4>
+                        <p class="language-role">Style</p>
+                        <p>Couleurs et mise en forme</p>
+                        <div class="language-example">
+                            <code>button { color: blue; }</code>
+                        </div>
+                    </div>
+                    
+                    <div class="language-card highlighted">
+                        <div class="language-icon">⚡</div>
+                        <h4>JavaScript</h4>
+                        <p class="language-role">Comportement</p>
+                        <p>Actions et interactions</p>
+                        <div class="language-example">
+                            <code>button.onclick = () => alert("Bonjour!");</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="js-examples">
+                <h3>Ce que JavaScript peut faire :</h3>
+                <div class="examples-grid">
+                    <div class="example-item">
+                        <span class="example-icon">👆</span>
+                        <h4>Réagir aux clics</h4>
+                        <p>Boutons qui changent le contenu</p>
+                    </div>
+                    
+                    <div class="example-item">
+                        <span class="example-icon">🎨</span>
+                        <h4>Modifier l'apparence</h4>
+                        <p>Changer couleurs et tailles</p>
+                    </div>
+                    
+                    <div class="example-item">
+                        <span class="example-icon">💬</span>
+                        <h4>Afficher des messages</h4>
+                        <p>Alertes et notifications</p>
+                    </div>
+                    
+                    <div class="example-item">
+                        <span class="example-icon">🕐</span>
+                        <h4>Créer des animations</h4>
+                        <p>Éléments qui bougent</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="js-syntax" class="content-section">
+            <div class="section-header">
+                <h2>📝 Les bases de JavaScript</h2>
+                <span class="duration">12 min</span>
+            </div>
+            
+            <div class="syntax-basics">
+                <div class="syntax-item">
+                    <h3>1. Les variables</h3>
+                    <p>Pour stocker des informations :</p>
+                    <div class="code-demo">
+                        <pre><code>let nom = "Marie";
+let age = 16;
+let message = "Bonjour " + nom;</code></pre>
+                    </div>
+                    <div class="code-explanation">
+                        <code>let</code> = créer une variable<br>
+                        <code>=</code> = attribuer une valeur<br>
+                        <code>+</code> = assembler du texte
+                    </div>
+                </div>
+
+                <div class="syntax-item">
+                    <h3>2. Les fonctions</h3>
+                    <p>Pour exécuter des actions :</p>
+                    <div class="code-demo">
+                        <pre><code>function direBonjour() {
+    alert("Bonjour tout le monde !");
+}
+
+direBonjour(); // Appeler la fonction</code></pre>
+                    </div>
+                    <div class="code-explanation">
+                        <code>function</code> = créer une fonction<br>
+                        <code>{ }</code> = contenu de la fonction<br>
+                        <code>alert()</code> = afficher un message
+                    </div>
+                </div>
+
+                <div class="syntax-item">
+                    <h3>3. Les événements</h3>
+                    <p>Pour réagir aux actions de l'utilisateur :</p>
+                    <div class="code-demo">
+                        <pre><code>// Dans le HTML :
+&lt;button onclick="direBonjour()"&gt;Cliquez-moi&lt;/button&gt;
+
+// Quand on clique, la fonction direBonjour() s'exécute</code></pre>
+                    </div>
+                    <div class="code-explanation">
+                        <code>onclick</code> = quand on clique<br>
+                        <code>onmouseover</code> = quand la souris passe dessus<br>
+                        <code>onchange</code> = quand quelque chose change
+                    </div>
+                </div>
+            </div>
+
+            <div class="integration-example">
+                <h3>📋 Exemple complet : Page interactive</h3>
+                <div class="full-example">
+                    <div class="example-html">
+                        <h4>HTML :</h4>
+                        <pre><code>&lt;button onclick="changerCouleur()"&gt;Changer la couleur&lt;/button&gt;
+&lt;p id="monTexte"&gt;Ce texte va changer !&lt;/p&gt;</code></pre>
+                    </div>
+                    
+                    <div class="example-js">
+                        <h4>JavaScript :</h4>
+                        <pre><code>function changerCouleur() {
+    let texte = document.getElementById("monTexte");
+    texte.style.color = "red";
+    texte.innerHTML = "Le texte a changé !";
+}</code></pre>
+                    </div>
+                    
+                    <div class="example-result">
+                        <h4>Résultat :</h4>
+                        <div class="demo-interactive">
+                            <button class="demo-button" onclick="demonstrationChangeCouleur()">Changer la couleur</button>
+                            <p id="demoTexte">Ce texte va changer !</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pratique-time" class="content-section practice-section">
+            <div class="section-header">
+                <h2>⚡ À vous de jouer !</h2>
+                <span class="duration">40 min</span>
+            </div>
+            
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3>🎯 Activité 6 : Mes premières interactions</h3>
+                    <div class="activity-time">40 min</div>
+                </div>
+                
+                <div class="activity-content">
+                    <p>Vous allez ajouter de l'interactivité à votre page web avec JavaScript !</p>
+                    
+                    <div class="activity-missions">
+                        <div class="mission-item">
+                            <span class="mission-number">1</span>
+                            <div class="mission-content">
+                                <h4>Bouton magique</h4>
+                                <p>Créer un bouton qui change le contenu de la page</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mission-item">
+                            <span class="mission-number">2</span>
+                            <div class="mission-content">
+                                <h4>Texte coloré</h4>
+                                <p>Changer la couleur du texte au clic</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mission-item">
+                            <span class="mission-number">3</span>
+                            <div class="mission-content">
+                                <h4>Compteur de clics</h4>
+                                <p>Compter le nombre de fois qu'on clique</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mission-item">
+                            <span class="mission-number">4</span>
+                            <div class="mission-content">
+                                <h4>Message personnalisé</h4>
+                                <p>Afficher le nom saisi par l'utilisateur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-preview">
+                    <h4>Aperçu de votre page interactive :</h4>
+                    <div class="preview-interactive">
+                        <div class="preview-element">
+                            <button class="preview-button">🎨 Changer style</button>
+                            <span class="preview-arrow">→</span>
+                            <div class="preview-text">Texte qui change de couleur</div>
+                        </div>
+                        
+                        <div class="preview-element">
+                            <button class="preview-button">🔢 Compter</button>
+                            <span class="preview-arrow">→</span>
+                            <div class="preview-counter">Clics: 0</div>
+                        </div>
+                        
+                        <div class="preview-element">
+                            <input type="text" class="preview-input" placeholder="Votre nom">
+                            <button class="preview-button">👋 Saluer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="js-tips">
+                <h4>💡 Conseils pour débuter :</h4>
+                <ul>
+                    <li><strong>Testez souvent</strong> : Sauvegardez et actualisez après chaque modification</li>
+                    <li><strong>Attention aux majuscules</strong> : JavaScript est sensible à la casse</li>
+                    <li><strong>Vérifiez les guillemets</strong> : Toujours fermer les " "</li>
+                    <li><strong>Utilisez la console</strong> : F12 → Console pour voir les erreurs</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="course-footer">
+        <div class="session-recap">
+            <h3>📚 À retenir de cette séance :</h3>
+            <ul>
+                <li>JavaScript rend les pages web interactives</li>
+                <li>Variables : <code>let nom = "valeur";</code></li>
+                <li>Fonctions : <code>function nomFonction() { }</code></li>
+                <li>Événements : <code>onclick="fonction()"</code></li>
+            </ul>
+        </div>
+        <div class="next-session">
+            <p>Prochaine séance : <strong>JavaScript - Interactivité avancée</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        function demonstrationChangeCouleur() {
+            let texte = document.getElementById("demoTexte");
+            let couleurs = ["red", "blue", "green", "purple", "orange"];
+            let couleurAleatoire = couleurs[Math.floor(Math.random() * couleurs.length)];
+            texte.style.color = couleurAleatoire;
+            texte.innerHTML = "Le texte a changé de couleur !";
+        }
+    </script>
+</body>
+</html>

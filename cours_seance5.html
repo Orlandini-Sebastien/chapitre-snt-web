@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNT 2GT - Séance 5 : Liens et navigation</title>
+    <link rel="stylesheet" href="style_cours_seance5.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="title-main">Liens et navigation</h1>
+            <div class="session-info">
+                <span class="session-number">Séance 5/8</span>
+                <span class="session-title">Créer un site multi-pages</span>
+            </div>
+        </div>
+        <div class="level-badge">2nde GT - SNT</div>
+    </header>
+
+    <div class="time-indicator">
+        <span class="time-course">📚 Cours : 15 min</span>
+        <span class="time-practice">⚡ Pratique : 45 min</span>
+    </div>
+
+    <main class="course-content">
+        <section id="navigation-intro" class="content-section">
+            <div class="section-header">
+                <h2>🔗 Les liens : Cœur du Web</h2>
+                <span class="duration">8 min</span>
+            </div>
+            
+            <div class="navigation-concept">
+                <h3>Pourquoi des liens ?</h3>
+                <p>Les liens permettent de <strong>naviguer</strong> entre les pages et créent le <strong>réseau</strong> du Web</p>
+                
+                <div class="web-structure-visual">
+                    <div class="page-bubble main-page">
+                        <div class="page-icon">🏠</div>
+                        <div class="page-name">Accueil<br><small>index.html</small></div>
+                    </div>
+                    
+                    <div class="connection-lines">
+                        <div class="link-line to-about"></div>
+                        <div class="link-line to-projects"></div>
+                        <div class="link-line to-contact"></div>
+                    </div>
+                    
+                    <div class="page-bubble about-page">
+                        <div class="page-icon">👤</div>
+                        <div class="page-name">À propos<br><small>about.html</small></div>
+                    </div>
+                    
+                    <div class="page-bubble projects-page">
+                        <div class="page-icon">💼</div>
+                        <div class="page-name">Projets<br><small>projets.html</small></div>
+                    </div>
+                    
+                    <div class="page-bubble contact-page">
+                        <div class="page-icon">📧</div>
+                        <div class="page-name">Contact<br><small>contact.html</small></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="link-types">
+                <h3>🎯 Types de liens</h3>
+                <div class="link-types-grid">
+                    <div class="link-type-card">
+                        <div class="link-icon">🏠</div>
+                        <h4>Liens internes</h4>
+                        <p>Vers d'autres pages de votre site</p>
+                        <div class="link-example">
+                            <code>&lt;a href="about.html"&gt;À propos&lt;/a&gt;</code>
+                        </div>
+                    </div>
+                    
+                    <div class="link-type-card">
+                        <div class="link-icon">🌍</div>
+                        <h4>Liens externes</h4>
+                        <p>Vers d'autres sites web</p>
+                        <div class="link-example">
+                            <code>&lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;</code>
+                        </div>
+                    </div>
+                    
+                    <div class="link-type-card">
+                        <div class="link-icon">📧</div>
+                        <h4>Liens email</h4>
+                        <p>Pour envoyer un email</p>
+                        <div class="link-example">
+                            <code>&lt;a href="mailto:contact@exemple.fr"&gt;Email&lt;/a&gt;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="file-organization" class="content-section">
+            <div class="section-header">
+                <h2>📁 Organisation des fichiers</h2>
+                <span class="duration">7 min</span>
+            </div>
+            
+            <div class="file-structure">
+                <h3>🗂️ Arborescence recommandée</h3>
+                <div class="folder-tree">
+                    <div class="folder-item root">
+                        <span class="folder-icon">📁</span>
+                        <span class="folder-name">Mon_Site_Web/</span>
+                        
+                        <div class="folder-children">
+                            <div class="file-item">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name">index.html</span>
+                                <span class="file-desc">(page d'accueil)</span>
+                            </div>
+                            
+                            <div class="file-item">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name">about.html</span>
+                                <span class="file-desc">(page à propos)</span>
+                            </div>
+                            
+                            <div class="file-item">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name">projets.html</span>
+                                <span class="file-desc">(page projets)</span>
+                            </div>
+                            
+                            <div class="file-item">
+                                <span class="file-icon">🎨</span>
+                                <span class="file-name">style.css</span>
+                                <span class="file-desc">(feuille de style)</span>
+                            </div>
+                            
+                            <div class="folder-item">
+                                <span class="folder-icon">📁</span>
+                                <span class="folder-name">images/</span>
+                                <div class="folder-children">
+                                    <div class="file-item">
+                                        <span class="file-icon">🖼️</span>
+                                        <span class="file-name">photo.jpg</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="url-paths">
+                <h3>🛤️ Chemins relatifs vs absolus</h3>
+                <div class="paths-comparison">
+                    <div class="path-type">
+                        <h4>Chemin relatif ✅</h4>
+                        <p>Par rapport au fichier actuel</p>
+                        <div class="path-examples">
+                            <div class="path-example">
+                                <code>about.html</code>
+                                <span>→ Dans le même dossier</span>
+                            </div>
+                            <div class="path-example">
+                                <code>images/photo.jpg</code>
+                                <span>→ Dans le sous-dossier images</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="path-type">
+                        <h4>Chemin absolu ⚠️</h4>
+                        <p>Adresse complète (éviter)</p>
+                        <div class="path-examples">
+                            <div class="path-example">
+                                <code>C:\Users\Marie\Desktop\about.html</code>
+                                <span>→ Ne fonctionne que sur votre PC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="best-practice">
+                    <h4>💡 Bonne pratique</h4>
+                    <p>Toujours utiliser des <strong>chemins relatifs</strong> pour que votre site fonctionne partout !</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pratique-time" class="content-section practice-section">
+            <div class="section-header">
+                <h2>⚡ À vous de jouer !</h2>
+                <span class="duration">45 min</span>
+            </div>
+            
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3>🎯 Activité 5 : Un site à plusieurs pages</h3>
+                    <div class="activity-time">45 min</div>
+                </div>
+                
+                <div class="activity-content">
+                    <p>Vous allez transformer votre portfolio en véritable site web avec navigation !</p>
+                    
+                    <div class="activity-roadmap">
+                        <div class="roadmap-step">
+                            <div class="step-circle">1</div>
+                            <div class="step-content">
+                                <h4>Réorganiser</h4>
+                                <p>Restructurer le contenu existant</p>
+                            </div>
+                        </div>
+                        
+                        <div class="roadmap-arrow">→</div>
+                        
+                        <div class="roadmap-step">
+                            <div class="step-circle">2</div>
+                            <div class="step-content">
+                                <h4>Créer pages</h4>
+                                <p>Nouvelles pages HTML</p>
+                            </div>
+                        </div>
+                        
+                        <div class="roadmap-arrow">→</div>
+                        
+                        <div class="roadmap-step">
+                            <div class="step-circle">3</div>
+                            <div class="step-content">
+                                <h4>Menu navigation</h4>
+                                <p>Liens entre les pages</p>
+                            </div>
+                        </div>
+                        
+                        <div class="roadmap-arrow">→</div>
+                        
+                        <div class="roadmap-step">
+                            <div class="step-circle">4</div>
+                            <div class="step-content">
+                                <h4>Tester</h4>
+                                <p>Vérifier la navigation</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="site-preview">
+                        <h4>📱 Structure finale de votre site :</h4>
+                        <div class="site-mockup">
+                            <div class="mock-navbar">
+                                <div class="nav-item active">Accueil</div>
+                                <div class="nav-item">À propos</div>
+                                <div class="nav-item">Projets</div>
+                            </div>
+                            <div class="mock-content">
+                                <div class="mock-title">Bienvenue sur mon Portfolio</div>
+                                <div class="mock-text">Navigation entre les pages...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pages-to-create">
+                    <h4>📄 Pages à créer :</h4>
+                    <div class="pages-grid">
+                        <div class="page-plan">
+                            <div class="page-header">🏠 index.html</div>
+                            <div class="page-content">
+                                • Présentation générale<br>
+                                • Menu de navigation<br>
+                                • Liens vers autres pages
+                            </div>
+                        </div>
+                        
+                        <div class="page-plan">
+                            <div class="page-header">👤 about.html</div>
+                            <div class="page-content">
+                                • Qui suis-je<br>
+                                • Mes matières préférées<br>
+                                • Mes hobbies
+                            </div>
+                        </div>
+                        
+                        <div class="page-plan">
+                            <div class="page-header">💼 projets.html</div>
+                            <div class="page-content">
+                                • Mes projets actuels<br>
+                                • Mes projets futurs<br>
+                                • Mes réalisations
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navigation-tips">
+                <h4>🧭 Conseils pour la navigation :</h4>
+                <ul>
+                    <li><strong>Menu cohérent</strong> : Même menu sur toutes les pages</li>
+                    <li><strong>Lien "retour"</strong> : Toujours permettre de revenir à l'accueil</li>
+                    <li><strong>Page active</strong> : Indiquer où on se trouve</li>
+                    <li><strong>Tester tous les liens</strong> : Vérifier qu'ils fonctionnent</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="course-footer">
+        <div class="session-recap">
+            <h3>📚 À retenir de cette séance :</h3>
+            <ul>
+                <li>Balise &lt;a href=""&gt; pour créer des liens</li>
+                <li>Organisation des fichiers en arborescence</li>
+                <li>Chemins relatifs vs absolus</li>
+                <li>Navigation cohérente entre pages</li>
+            </ul>
+        </div>
+        <div class="next-session">
+            <p>Prochaine séance : <strong>Introduction au JavaScript</strong></p>
+        </div>
+    </footer>
+</body>
+</html>

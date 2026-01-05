@@ -1,0 +1,265 @@
+================================================================================
+SNT 2nde GT - SÉANCE 4 - ACTIVITÉ 4 : UNE PAGE STYLÉE
+================================================================================
+
+Durée : 45 minutes
+Objectif : Créer un design moderne avec CSS avancé
+
+================================================================================
+MATÉRIEL NÉCESSAIRE
+================================================================================
+
+✓ Vos fichiers index.html et style.css des séances précédentes
+✓ Bloc-notes (ou Notepad++)
+✓ Navigateur web
+✓ Cette fiche d'activité
+
+================================================================================
+ÉTAPE 1 : PRÉPARER LES FICHIERS (5 minutes)
+================================================================================
+
+1. Ouvrez votre dossier "Mon_Site_Web"
+2. Faites une copie de sauvegarde :
+   - Copiez style.css → Renommez en style_backup.css
+3. Ouvrez style.css dans le Bloc-notes
+4. Ouvrez index.html dans votre navigateur pour voir le résultat actuel
+
+================================================================================
+ÉTAPE 2 : AJOUTER LE BOX MODEL (15 minutes)
+================================================================================
+
+Dans style.css, REMPLACEZ le style actuel du body par :
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #E8F5E8, #F0FFF0);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+Puis AMÉLIOREZ le style de h1 :
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    background: linear-gradient(135deg, #4A90E2, #357ABD);
+    padding: 20px;
+    margin: 0 0 30px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+Ajoutez un nouveau style pour h2 :
+
+h2 {
+    color: #2C5F2D;
+    border-left: 5px solid #4A90E2;
+    padding-left: 15px;
+    margin: 25px 0 15px 0;
+    font-size: 22px;
+}
+
+Sauvegardez et actualisez (F5) pour voir les changements !
+
+================================================================================
+ÉTAPE 3 : CRÉER DES CARTES MODERNES (15 minutes)
+================================================================================
+
+Ajoutez ce nouveau style à la fin de style.css :
+
+.carte {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #4A90E2;
+    transition: all 0.3s ease;
+}
+
+.carte:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.important {
+    background: linear-gradient(135deg, #FFF3CD, #FFF8DC);
+    border-left-color: #F39C12;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+Maintenant, dans votre fichier HTML, ajoutez class="carte" à vos sections :
+
+AVANT :
+<h2>À propos de moi</h2>
+<p>Je suis <strong>Marie</strong>, élève en 2nde GT.</p>
+
+APRÈS :
+<div class="carte">
+<h2>À propos de moi</h2>
+<p>Je suis <strong>Marie</strong>, élève en 2nde GT.</p>
+</div>
+
+Faites pareil pour :
+- La section "Mes matières préférées"
+- La section "Mes hobbies" 
+- La section "Mes projets"
+
+================================================================================
+ÉTAPE 4 : STYLISER LES LISTES (5 minutes)
+================================================================================
+
+Ajoutez ces styles pour de belles listes :
+
+ul {
+    background: #F8F9FA;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #E9ECEF;
+}
+
+li {
+    margin-bottom: 8px;
+    padding-left: 5px;
+    position: relative;
+}
+
+li::before {
+    content: "✓";
+    color: #28A745;
+    font-weight: bold;
+    position: absolute;
+    left: -15px;
+}
+
+================================================================================
+ÉTAPE 5 : AJOUTER DES EFFETS VISUELS (5 minutes)
+================================================================================
+
+Améliorez le style de vos images et liens :
+
+img {
+    border-radius: 50%;
+    border: 4px solid #4A90E2;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+    transition: all 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+a {
+    color: #4A90E2;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: #4A90E2;
+    color: white;
+    transform: translateY(-1px);
+}
+
+================================================================================
+VÉRIFICATION DE VOTRE TRAVAIL
+================================================================================
+
+Votre page doit maintenant avoir :
+[  ] Un fond dégradé
+[  ] Un titre avec dégradé et ombre
+[  ] Des sections dans des cartes blanches
+[  ] Des listes avec des puces personnalisées
+[  ] Des effets au survol (hover)
+[  ] Une image ronde avec bordure
+[  ] Des liens stylés
+
+================================================================================
+PROBLÈMES FRÉQUENTS
+================================================================================
+
+PROBLÈME : Les cartes ne s'affichent pas
+SOLUTION : 
+- Vérifiez que vous avez bien ajouté <div class="carte"> et </div>
+- Vérifiez l'orthographe de "carte" dans le HTML et CSS
+
+PROBLÈME : Les effets hover ne marchent pas
+SOLUTION :
+- Vérifiez que la propriété transition est bien dans le CSS
+- Testez en passant la souris lentement sur les éléments
+
+PROBLÈME : Le dégradé ne s'affiche pas
+SOLUTION :
+- Vérifiez l'orthographe de "linear-gradient"
+- Assurez-vous qu'il n'y a pas d'espace dans les noms de couleurs
+
+================================================================================
+PERSONNALISATION LIBRE
+================================================================================
+
+Changez les couleurs selon vos goûts :
+□ Dégradé du titre : essayez #E74C3C, #8E44AD, #27AE60
+□ Couleur des bordures : #E74C3C, #F39C12, #9B59B6
+□ Couleur de fond : #EBF3FD, #FFF5F5, #F0FFF4
+
+Exemples de nouveaux dégradés :
+- Rouge : linear-gradient(135deg, #E74C3C, #C0392B)
+- Violet : linear-gradient(135deg, #9B59B6, #8E44AD)
+- Vert : linear-gradient(135deg, #27AE60, #2ECC71)
+
+================================================================================
+DÉFI BONUS (Si vous avez fini en avance)
+================================================================================
+
+1. Créez une classe .highlight pour mettre en valeur certains mots :
+.highlight {
+    background: linear-gradient(135deg, #FFE066, #FFD700);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+2. Ajoutez des animations :
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.carte {
+    animation: fadeIn 0.6s ease-out;
+}
+
+3. Créez un bouton stylé :
+.bouton {
+    background: linear-gradient(135deg, #4A90E2, #357ABD);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+================================================================================
+À RETENIR DE CETTE SÉANCE
+================================================================================
+
+✓ Box model : margin, padding, border
+✓ Effets visuels : box-shadow, border-radius, linear-gradient
+✓ Transitions : transition: all 0.3s ease
+✓ Pseudo-classes : :hover, ::before
+✓ Organisation avec des classes personnalisées
+
+================================================================================
+Prochaine séance : Liens et navigation entre pages
+================================================================================

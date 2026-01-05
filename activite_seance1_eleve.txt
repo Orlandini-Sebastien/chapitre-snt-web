@@ -1,0 +1,135 @@
+================================================================================
+SNT 2nde GT - SÉANCE 1 - ACTIVITÉ 1 : MA PREMIÈRE PAGE WEB
+================================================================================
+
+Durée : 45 minutes
+Objectif : Créer votre première page web en HTML
+
+================================================================================
+MATÉRIEL NÉCESSAIRE
+================================================================================
+
+✓ Bloc-notes (ou Notepad++)
+✓ Navigateur web (Chrome, Firefox, Edge...)
+✓ Votre créativité !
+
+================================================================================
+ÉTAPE 1 : PRÉPARATION (5 minutes)
+================================================================================
+
+1. Créez un dossier sur le Bureau appelé "Mon_Site_Web"
+2. Ouvrez le Bloc-notes
+3. Gardez votre navigateur ouvert dans une autre fenêtre
+
+================================================================================
+ÉTAPE 2 : ÉCRIRE LE CODE HTML (20 minutes)
+================================================================================
+
+Dans le Bloc-notes, tapez EXACTEMENT le code suivant :
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ma première page - [Votre Nom]</title>
+</head>
+<body>
+    <h1>Bonjour, je suis [Votre Nom] !</h1>
+    
+    <h2>Qui suis-je ?</h2>
+    <p>Je suis élève en <strong>2nde GT</strong> et j'apprends à créer des sites web.</p>
+    <p>Cette page web est <strong>ma première création</strong> !</p>
+    
+    <h2>Mes goûts</h2>
+    <p>J'aime :</p>
+    <p>- La musique<br>
+    - Les films<br>
+    - Les jeux vidéo<br>
+    - Le sport</p>
+    
+    <h2>Mon objectif</h2>
+    <p>À la fin de ce chapitre, je saurai créer un <strong>site web complet</strong> 
+    avec plusieurs pages et même des <strong>interactions</strong> !</p>
+    
+</body>
+</html>
+
+ATTENTION ! 
+- Remplacez [Votre Nom] par votre vrai nom
+- Modifiez la section "Mes goûts" avec VOS vrais goûts
+- Respectez bien les < > et les /
+- N'oubliez pas de fermer chaque balise !
+
+================================================================================
+ÉTAPE 3 : ENREGISTRER LE FICHIER (5 minutes)
+================================================================================
+
+1. Dans le Bloc-notes, allez dans "Fichier" > "Enregistrer sous..."
+2. Naviguez vers votre dossier "Mon_Site_Web" sur le Bureau
+3. Dans "Nom du fichier", tapez : index.html
+4. Dans "Type", choisissez "Tous les fichiers"
+5. Cliquez sur "Enregistrer"
+
+TRÈS IMPORTANT : Le fichier DOIT se terminer par .html !
+
+================================================================================
+ÉTAPE 4 : VISUALISER VOTRE CRÉATION (10 minutes)
+================================================================================
+
+1. Allez dans votre dossier "Mon_Site_Web"
+2. Double-cliquez sur le fichier "index.html"
+3. Votre page s'ouvre dans le navigateur !
+
+🎉 FÉLICITATIONS ! Vous venez de créer votre première page web !
+
+================================================================================
+ÉTAPE 5 : PERSONNALISATION (5 minutes)
+================================================================================
+
+Retournez dans le Bloc-notes et essayez de :
+
+1. Ajouter un nouveau paragraphe sur vos matières préférées
+2. Mettre en gras un mot important avec <strong></strong>
+3. Ajouter une nouvelle ligne avec <br>
+
+Après chaque modification :
+- Enregistrez le fichier (Ctrl + S)
+- Actualisez la page web (F5 dans le navigateur)
+
+================================================================================
+À RETENIR
+================================================================================
+
+✓ HTML = langage pour créer des pages web
+✓ Les balises s'ouvrent <balise> et se ferment </balise>
+✓ <h1> = grand titre, <h2> = sous-titre
+✓ <p> = paragraphe
+✓ <strong> = texte en gras
+✓ <br> = retour à la ligne
+✓ Il faut toujours sauvegarder en .html
+
+================================================================================
+PROBLÈMES FRÉQUENTS
+================================================================================
+
+PROBLÈME : La page ne s'affiche pas correctement
+SOLUTION : Vérifiez que le fichier se termine bien par .html
+
+PROBLÈME : Il y a du texte bizarre ou des balises visibles
+SOLUTION : Vous avez oublié de fermer une balise. Vérifiez chaque < >
+
+PROBLÈME : Rien ne se passe quand je modifie le code
+SOLUTION : Pensez à enregistrer (Ctrl+S) puis actualiser (F5)
+
+================================================================================
+DÉFI BONUS (Si vous avez fini en avance)
+================================================================================
+
+Ajoutez une section "Ma citation préférée" avec :
+- Un titre <h2>
+- Votre citation en gras avec <strong>
+- Le nom de l'auteur
+
+================================================================================
+Professeur : M./Mme [Nom]
+Prochaine séance : HTML - Structure et contenu
+================================================================================

@@ -1,0 +1,257 @@
+================================================================================
+SNT 2nde GT - SÉANCE 6 - ACTIVITÉ 6 : MES PREMIÈRES INTERACTIONS
+================================================================================
+
+Durée : 40 minutes
+Objectif : Ajouter du JavaScript pour rendre vos pages interactives
+
+================================================================================
+ÉTAPE 1 : CRÉER UNE PAGE DE TEST (10 minutes)
+================================================================================
+
+1. Dans votre dossier, créez un nouveau fichier : interactive.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ma Page Interactive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="menu">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="projets.html">Projets</a>
+        <a href="interactive.html" class="actif">Interactif</a>
+    </nav>
+    
+    <div class="carte">
+        <h1>Ma Page Interactive</h1>
+        <p>Découvrez le pouvoir de JavaScript !</p>
+    </div>
+    
+    <!-- Zone pour les exercices JavaScript -->
+    <div id="zone-js"></div>
+    
+    <script>
+        // Votre code JavaScript ira ici !
+        console.log("JavaScript fonctionne !");
+    </script>
+</body>
+</html>
+
+2. Ajoutez le lien vers cette page dans vos autres menus de navigation.
+
+================================================================================
+ÉTAPE 2 : PREMIER BOUTON INTERACTIF (10 minutes)
+================================================================================
+
+Ajoutez ce code AVANT la balise </script> dans interactive.html :
+
+<div class="carte">
+    <h2>🎨 Changeur de couleur</h2>
+    <p>Cliquez sur le bouton pour changer la couleur de fond !</p>
+    <button onclick="changerCouleur()" class="bouton-js">Changer la couleur</button>
+</div>
+
+<script>
+function changerCouleur() {
+    // Liste de couleurs
+    let couleurs = ["lightblue", "lightgreen", "lightpink", "lightyellow", "lightcoral"];
+    
+    // Choisir une couleur au hasard
+    let hasard = Math.floor(Math.random() * couleurs.length);
+    
+    // Changer la couleur de fond
+    document.body.style.backgroundColor = couleurs[hasard];
+    
+    // Afficher un message
+    alert("Nouvelle couleur appliquée !");
+}
+</script>
+
+================================================================================
+ÉTAPE 3 : COMPTEUR DE CLICS (10 minutes)
+================================================================================
+
+Ajoutez cette section :
+
+<div class="carte">
+    <h2>🔢 Compteur de clics</h2>
+    <p>Nombre de clics : <span id="compteur">0</span></p>
+    <button onclick="incrementer()" class="bouton-js">Cliquer ici !</button>
+    <button onclick="reset()" class="bouton-js rouge">Remettre à zéro</button>
+</div>
+
+Et ajoutez ce JavaScript :
+
+let nombreClics = 0;
+
+function incrementer() {
+    nombreClics = nombreClics + 1;
+    document.getElementById("compteur").innerHTML = nombreClics;
+    
+    if (nombreClics === 10) {
+        alert("Bravo ! Vous avez atteint 10 clics !");
+    }
+}
+
+function reset() {
+    nombreClics = 0;
+    document.getElementById("compteur").innerHTML = nombreClics;
+}
+
+================================================================================
+ÉTAPE 4 : MESSAGE PERSONNALISÉ (10 minutes)
+================================================================================
+
+Ajoutez cette section :
+
+<div class="carte">
+    <h2>👋 Salutation personnalisée</h2>
+    <p>Entrez votre nom :</p>
+    <input type="text" id="nomUtilisateur" placeholder="Tapez votre nom">
+    <button onclick="direBonjour()" class="bouton-js">Me saluer !</button>
+    <p id="message-salut"></p>
+</div>
+
+Et ce JavaScript :
+
+function direBonjour() {
+    let nom = document.getElementById("nomUtilisateur").value;
+    let message = document.getElementById("message-salut");
+    
+    if (nom === "") {
+        message.innerHTML = "❌ Veuillez entrer votre nom !";
+        message.style.color = "red";
+    } else {
+        message.innerHTML = "🎉 Bonjour " + nom + " ! Bienvenue sur mon site !";
+        message.style.color = "green";
+    }
+}
+
+================================================================================
+ÉTAPE 5 : AMÉLIORER LE CSS (Bonus)
+================================================================================
+
+Ajoutez ce CSS à votre fichier style.css :
+
+/* Styles pour les éléments JavaScript */
+.bouton-js {
+    background: linear-gradient(135deg, #4A90E2, #357ABD);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.bouton-js:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+.bouton-js.rouge {
+    background: linear-gradient(135deg, #E74C3C, #C0392B);
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 16px;
+    width: 200px;
+}
+
+#compteur {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4A90E2;
+    background: #E8F4FD;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+================================================================================
+TESTS À EFFECTUER
+================================================================================
+
+Votre page interactive doit avoir :
+[  ] Bouton qui change la couleur de fond
+[  ] Compteur qui s'incrémente à chaque clic
+[  ] Bouton reset qui remet le compteur à 0
+[  ] Champ de saisie pour le nom
+[  ] Message de salutation personnalisé
+[  ] Validation si le nom est vide
+[  ] Message spécial à 10 clics
+
+================================================================================
+PROBLÈMES FRÉQUENTS
+================================================================================
+
+PROBLÈME : "ReferenceError: fonction is not defined"
+SOLUTION : 
+- Vérifiez l'orthographe du nom de fonction
+- Assurez-vous que la fonction est définie avant l'appel
+
+PROBLÈME : Les variables ne se sauvegardent pas
+SOLUTION :
+- Déclarez les variables HORS des fonctions (variables globales)
+- Exemple : let nombreClics = 0; (au début du script)
+
+PROBLÈME : getElementById retourne null
+SOLUTION :
+- Vérifiez l'orthographe de l'id dans le HTML et JS
+- L'id doit être unique sur la page
+
+================================================================================
+DÉFIS BONUS (Si vous avez fini en avance)
+================================================================================
+
+1. **Générateur de phrases** :
+   - Créez des listes de mots (noms, adjectifs, verbes)
+   - Générez des phrases aléatoires amusantes
+
+2. **Mini-quiz** :
+   - Posez une question avec prompt()
+   - Vérifiez la réponse et affichez le score
+
+3. **Calculatrice simple** :
+   - Deux champs pour les nombres
+   - Boutons +, -, ×, ÷
+   - Affichage du résultat
+
+Exemple de générateur de phrases :
+```javascript
+function genererPhrase() {
+    let noms = ["chat", "chien", "oiseau", "poisson"];
+    let adjectifs = ["mignon", "drôle", "intelligent", "coloré"];
+    let verbes = ["court", "mange", "danse", "chante"];
+    
+    let nom = noms[Math.floor(Math.random() * noms.length)];
+    let adj = adjectifs[Math.floor(Math.random() * adjectifs.length)];
+    let verbe = verbes[Math.floor(Math.random() * verbes.length)];
+    
+    let phrase = "Le " + nom + " " + adj + " " + verbe + ".";
+    document.getElementById("phrase-aleatoire").innerHTML = phrase;
+}
+```
+
+================================================================================
+À RETENIR DE CETTE SÉANCE
+================================================================================
+
+✓ onclick="" pour déclencher une fonction
+✓ document.getElementById() pour sélectionner un élément
+✓ .innerHTML pour modifier le contenu
+✓ .style.propriété pour modifier l'apparence
+✓ Math.random() pour les nombres aléatoires
+✓ alert() et prompt() pour interagir avec l'utilisateur
+
+================================================================================
+Prochaine séance : JavaScript avancé - Animations et interactions complexes
+================================================================================

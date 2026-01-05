@@ -1,0 +1,266 @@
+================================================================================
+SNT 2nde GT - SÉANCE 6 - CORRECTION ACTIVITÉ 6 : MES PREMIÈRES INTERACTIONS
+================================================================================
+
+OBJECTIFS PÉDAGOGIQUES
+- Découvrir JavaScript et son rôle dans l'interactivité web
+- Maîtriser les concepts de base : variables, fonctions, événements
+- Utiliser document.getElementById() et manipulation du DOM
+- Créer des interactions simples avec l'utilisateur
+
+================================================================================
+CODE JAVASCRIPT ATTENDU
+================================================================================
+
+1. CHANGEUR DE COULEUR :
+
+function changerCouleur() {
+    let couleurs = ["lightblue", "lightgreen", "lightpink", "lightyellow", "lightcoral"];
+    let hasard = Math.floor(Math.random() * couleurs.length);
+    document.body.style.backgroundColor = couleurs[hasard];
+    alert("Nouvelle couleur appliquée !");
+}
+
+2. COMPTEUR DE CLICS :
+
+let nombreClics = 0;
+
+function incrementer() {
+    nombreClics = nombreClics + 1;
+    document.getElementById("compteur").innerHTML = nombreClics;
+    
+    if (nombreClics === 10) {
+        alert("Bravo ! Vous avez atteint 10 clics !");
+    }
+}
+
+function reset() {
+    nombreClics = 0;
+    document.getElementById("compteur").innerHTML = nombreClics;
+}
+
+3. SALUTATION PERSONNALISÉE :
+
+function direBonjour() {
+    let nom = document.getElementById("nomUtilisateur").value;
+    let message = document.getElementById("message-salut");
+    
+    if (nom === "") {
+        message.innerHTML = "❌ Veuillez entrer votre nom !";
+        message.style.color = "red";
+    } else {
+        message.innerHTML = "🎉 Bonjour " + nom + " ! Bienvenue sur mon site !";
+        message.style.color = "green";
+    }
+}
+
+================================================================================
+STRUCTURE HTML ATTENDUE
+================================================================================
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ma Page Interactive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="menu">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="projets.html">Projets</a>
+        <a href="interactive.html" class="actif">Interactif</a>
+    </nav>
+    
+    <!-- 3 sections d'activités JavaScript -->
+    <!-- Code fourni dans l'activité élève -->
+    
+    <script>
+        // Code JavaScript ici
+    </script>
+</body>
+</html>
+
+================================================================================
+COMPÉTENCES ÉVALUÉES
+================================================================================
+
+ACQUIS ✓ (4-5 points par section) :
+- Page interactive.html créée avec navigation
+- 3 fonctionnalités JavaScript opérationnelles
+- Syntaxe JavaScript correcte
+- Manipulation DOM réussie (getElementById, innerHTML, style)
+- Gestion des événements onclick
+- Validation des données utilisateur
+
+EN COURS D'ACQUISITION ~ (2-3 points) :
+- 2 fonctionnalités sur 3 fonctionnelles
+- Quelques erreurs de syntaxe mineures
+- Logique globalement correcte mais perfectible
+
+NON ACQUIS ✗ (0-1 point) :
+- Page JavaScript absente ou non fonctionnelle
+- Erreurs majeures empêchant l'exécution
+- Incompréhension des concepts de base
+
+================================================================================
+ERREURS FRÉQUENTES ET SOLUTIONS
+================================================================================
+
+ERREUR 1 : "ReferenceError: fonction is not defined"
+Symptôme : Erreur dans la console quand on clique sur un bouton
+Causes :
+- Faute de frappe dans le nom de fonction
+- Fonction déclarée après son utilisation
+- Fonction dans un autre fichier script
+Solutions :
+- Vérifier l'orthographe exacte
+- Déclarer la fonction avant de l'appeler
+- Tout mettre dans le même <script>
+
+ERREUR 2 : "TypeError: Cannot read property 'innerHTML' of null"
+Symptôme : getElementById retourne null
+Causes :
+- ID inexistant dans le HTML
+- Faute de frappe dans l'ID
+- Script exécuté avant le chargement du DOM
+Solutions :
+- Vérifier l'orthographe de l'ID
+- S'assurer que l'élément existe
+- Mettre le script à la fin du body
+
+ERREUR 3 : Variables non sauvegardées
+Symptôme : Le compteur repart à 0 à chaque clic
+Cause : Variable déclarée dans la fonction au lieu d'être globale
+Solution : Déclarer let nombreClics = 0; HORS de la fonction
+
+ERREUR 4 : Math.random() mal utilisé
+Erreurs fréquentes :
+- Math.random() * couleurs.length (donne des décimales)
+- Math.random(couleurs.length) (syntaxe incorrecte)
+Solution correcte : Math.floor(Math.random() * couleurs.length)
+
+ERREUR 5 : Concatenation de strings
+Erreur : nombreClics = nombreClics + 1 devient "01" au lieu de 1
+Cause : Récupération en string au lieu de number
+Solution : Utiliser parseInt() ou s'assurer du type number
+
+================================================================================
+DIFFÉRENCIATION PÉDAGOGIQUE
+================================================================================
+
+POUR LES ÉLÈVES EN DIFFICULTÉ :
+- Fournir le code HTML pré-structuré
+- Guider étape par étape pour la première fonction
+- Expliquer console.log() pour déboguer
+- Simplifier : commencer par alert() avant manipulation DOM
+
+POUR LES ÉLÈVES AVANCÉS :
+- Encourager les améliorations personnelles
+- Introduire addEventListener() au lieu d'onclick
+- Proposer des défis bonus (voir fiche élève)
+- Faire découvrir les outils développeur (F12)
+
+EXTENSIONS POSSIBLES :
+1. Générateur de phrases aléatoires
+2. Mini-quiz avec score
+3. Calculatrice simple
+4. Jeu de mémoire basique
+5. To-do list interactive
+
+================================================================================
+GRILLE D'ÉVALUATION JAVASCRIPT
+================================================================================
+
+TECHNIQUE (10 points) :
+[  ] Page interactive créée et accessible (2 pts)
+[  ] Syntaxe JavaScript correcte (3 pts)
+[  ] 3 fonctionnalités implementées (5 pts)
+
+FONCTIONNALITÉS (6 points) :
+[  ] Changeur de couleur fonctionnel (2 pts)
+[  ] Compteur avec reset fonctionnel (2 pts)
+[  ] Salutation avec validation fonctionnelle (2 pts)
+
+QUALITÉ (4 points) :
+[  ] Code propre et commenté (2 pts)
+[  ] Interface utilisateur soignée (1 pt)
+[  ] Gestion des erreurs basique (1 pt)
+
+BONUS (3 points) :
+[  ] Fonctionnalités supplémentaires (2 pts)
+[  ] Innovations créatives (1 pt)
+
+Note finale : ___/20 (+3 bonus max)
+
+================================================================================
+DÉBOGAGE ET AIDE AUX ÉLÈVES
+================================================================================
+
+MÉTHODES DE DÉBOGAGE À ENSEIGNER :
+1. **Console du navigateur (F12)** :
+   - Voir les erreurs JavaScript
+   - Utiliser console.log() pour afficher des valeurs
+
+2. **Tests progressifs** :
+   - Commencer par alert("Test") dans la fonction
+   - Vérifier étape par étape
+
+3. **Vérifications basiques** :
+   - L'élément HTML existe-t-il ?
+   - La fonction est-elle bien nommée ?
+   - Les guillemets/parenthèses sont-ils fermés ?
+
+PHRASES D'AIDE POUR LES ÉLÈVES :
+- "Regardons ensemble la console (F12) pour voir l'erreur"
+- "Vérifions que l'ID dans HTML correspond à celui en JS"
+- "Testons d'abord avec un simple alert() pour voir si la fonction est appelée"
+- "Les variables globales se déclarent en haut, en dehors des fonctions"
+
+================================================================================
+BILAN ET PROGRESSION
+================================================================================
+
+ACQUIS FONDAMENTAUX :
+✓ Concept d'événement et de réaction
+✓ Manipulation basique du DOM
+✓ Variables et fonctions JavaScript
+✓ Interaction avec l'utilisateur
+
+DIFFICULTÉS TYPIQUES :
+- Rigueur syntaxique JavaScript
+- Compréhension de la portée des variables
+- Debugging et lecture d'erreurs
+- Distinction HTML/CSS/JavaScript
+
+PRÉPARATION SÉANCE SUIVANTE :
+- Approfondir la manipulation DOM
+- Introduire les timers (setInterval)
+- Découvrir les animations CSS+JS
+- Préparer des projets plus complexes
+
+LIENS AVEC LE PROGRAMME :
+- Algorithmique : séquences, conditions, variables
+- Numérique : interactivité homme-machine
+- Programmation : événements, fonctions
+
+================================================================================
+RESSOURCES COMPLÉMENTAIRES
+================================================================================
+
+POUR L'ENSEIGNANT :
+- Mozilla Developer Network (MDN) - JavaScript
+- w3schools.com - tutoriels interactifs
+- JavaScript.info - cours moderne et complet
+
+POUR LES ÉLÈVES MOTIVÉS :
+- Codecademy - cours JavaScript interactif
+- FreeCodeCamp - projets pratiques
+- Khan Academy - programmation pour débutants
+
+OUTILS RECOMMANDÉS :
+- Visual Studio Code (éditeur gratuit)
+- Chrome DevTools (debugging)
+- JSFiddle.net (tests en ligne)
+
+================================================================================
