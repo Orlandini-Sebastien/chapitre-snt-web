@@ -1,252 +1,279 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNT 2GT - Séance 2 : HTML - Structure et contenu</title>
-    <link rel="stylesheet" href="style_cours_seance2.css">
-</head>
-<body>
-    <header class="main-header">
-        <div class="header-content">
-            <h1 class="title-main">HTML - Structure et contenu</h1>
-            <div class="session-info">
-                <span class="session-number">Séance 2/8</span>
-                <span class="session-title">Balises avancées et organisation</span>
-            </div>
-        </div>
-        <div class="level-badge">2nde GT - SNT</div>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SNT 2GT - Séance 2 : HTML - Structure et contenu</title>
+		<link rel="stylesheet" href="style_cours_seance2.css" />
+	</head>
+	<body>
+		<script src="https://unpkg.com/lucide@latest"></script>
 
-    <div class="time-indicator">
-        <span class="time-course">📚 Cours : 15 min</span>
-        <span class="time-practice">⚡ Pratique : 45 min</span>
-    </div>
+		<a href="index.html" class="btn-home">
+			<i data-lucide="home"></i>
+			<span>Accueil</span>
+		</a>
 
-    <main class="course-content">
-        <section id="html-structure" class="content-section">
-            <div class="section-header">
-                <h2>🏗️ Organiser le contenu avec HTML</h2>
-                <span class="duration">8 min</span>
-            </div>
-            
-            <div class="structure-concept">
-                <h3>HTML : Plus qu'un simple texte !</h3>
-                <p>HTML permet de <strong>structurer</strong> et <strong>organiser</strong> l'information</p>
-                
-                <div class="structure-demo">
-                    <div class="structure-visual">
-                        <div class="structure-item title">
-                            <span class="structure-tag">&lt;h1&gt;</span>
-                            <span class="structure-content">TITRE PRINCIPAL</span>
-                        </div>
-                        <div class="structure-item subtitle">
-                            <span class="structure-tag">&lt;h2&gt;</span>
-                            <span class="structure-content">Sous-titre</span>
-                        </div>
-                        <div class="structure-item paragraph">
-                            <span class="structure-tag">&lt;p&gt;</span>
-                            <span class="structure-content">Paragraphe de texte...</span>
-                        </div>
-                        <div class="structure-item list">
-                            <span class="structure-tag">&lt;ul&gt;</span>
-                            <span class="structure-content">• Liste à puces</span>
-                        </div>
-                        <div class="structure-item image">
-                            <span class="structure-tag">&lt;img&gt;</span>
-                            <span class="structure-content">🖼️ Image</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+		<script>
+			lucide.createIcons();
+		</script>
+		<header class="main-header">
+			<div class="header-content">
+				<h1 class="title-main">HTML - Structure et contenu</h1>
+				<div class="session-info">
+					<span class="session-number">Séance 2/8</span>
+					<span class="session-title">Balises avancées et organisation</span>
+				</div>
+			</div>
+			<div class="level-badge">2nde GT - SNT</div>
+		</header>
 
-            <div class="hierarchy-box">
-                <h3>🏆 Hiérarchie des titres</h3>
-                <div class="title-hierarchy">
-                    <div class="title-level">
-                        <code>&lt;h1&gt;</code>
-                        <div class="title-demo h1-demo">Titre principal</div>
-                        <span class="title-usage">1 seul par page</span>
-                    </div>
-                    <div class="title-level">
-                        <code>&lt;h2&gt;</code>
-                        <div class="title-demo h2-demo">Section importante</div>
-                        <span class="title-usage">Plusieurs possibles</span>
-                    </div>
-                    <div class="title-level">
-                        <code>&lt;h3&gt;</code>
-                        <div class="title-demo h3-demo">Sous-section</div>
-                        <span class="title-usage">Dans une section h2</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+		<div class="time-indicator">
+			<span class="time-course">📚 Cours : 15 min</span>
+			<span class="time-practice">⚡ Pratique : 45 min</span>
+		</div>
 
-        <section id="nouvelles-balises" class="content-section">
-            <div class="section-header">
-                <h2>🎯 Nouvelles balises essentielles</h2>
-                <span class="duration">7 min</span>
-            </div>
-            
-            <div class="tags-showcase">
-                <div class="tag-category">
-                    <h3>📝 Listes</h3>
-                    <div class="tag-demo">
-                        <div class="tag-code">
-                            <pre><code>&lt;ul&gt;
+		<main class="course-content">
+			<section id="html-structure" class="content-section">
+				<div class="section-header">
+					<h2>🏗️ Organiser le contenu avec HTML</h2>
+					<span class="duration">8 min</span>
+				</div>
+
+				<div class="structure-concept">
+					<h3>HTML : Plus qu'un simple texte !</h3>
+					<p>
+						HTML permet de <strong>structurer</strong> et
+						<strong>organiser</strong> l'information
+					</p>
+
+					<div class="structure-demo">
+						<div class="structure-visual">
+							<div class="structure-item title">
+								<span class="structure-tag">&lt;h1&gt;</span>
+								<span class="structure-content">TITRE PRINCIPAL</span>
+							</div>
+							<div class="structure-item subtitle">
+								<span class="structure-tag">&lt;h2&gt;</span>
+								<span class="structure-content">Sous-titre</span>
+							</div>
+							<div class="structure-item paragraph">
+								<span class="structure-tag">&lt;p&gt;</span>
+								<span class="structure-content">Paragraphe de texte...</span>
+							</div>
+							<div class="structure-item list">
+								<span class="structure-tag">&lt;ul&gt;</span>
+								<span class="structure-content">• Liste à puces</span>
+							</div>
+							<div class="structure-item image">
+								<span class="structure-tag">&lt;img&gt;</span>
+								<span class="structure-content">🖼️ Image</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="hierarchy-box">
+					<h3>🏆 Hiérarchie des titres</h3>
+					<div class="title-hierarchy">
+						<div class="title-level">
+							<code>&lt;h1&gt;</code>
+							<div class="title-demo h1-demo">Titre principal</div>
+							<span class="title-usage">1 seul par page</span>
+						</div>
+						<div class="title-level">
+							<code>&lt;h2&gt;</code>
+							<div class="title-demo h2-demo">Section importante</div>
+							<span class="title-usage">Plusieurs possibles</span>
+						</div>
+						<div class="title-level">
+							<code>&lt;h3&gt;</code>
+							<div class="title-demo h3-demo">Sous-section</div>
+							<span class="title-usage">Dans une section h2</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="nouvelles-balises" class="content-section">
+				<div class="section-header">
+					<h2>🎯 Nouvelles balises essentielles</h2>
+					<span class="duration">7 min</span>
+				</div>
+
+				<div class="tags-showcase">
+					<div class="tag-category">
+						<h3>📝 Listes</h3>
+						<div class="tag-demo">
+							<div class="tag-code">
+								<pre><code>&lt;ul&gt;
   &lt;li&gt;Premier élément&lt;/li&gt;
   &lt;li&gt;Deuxième élément&lt;/li&gt;
   &lt;li&gt;Troisième élément&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-                        </div>
-                        <div class="tag-result">
-                            <ul>
-                                <li>Premier élément</li>
-                                <li>Deuxième élément</li>
-                                <li>Troisième élément</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <p class="tag-tip"><code>&lt;ul&gt;</code> = liste non ordonnée, <code>&lt;li&gt;</code> = élément de liste</p>
-                </div>
+							</div>
+							<div class="tag-result">
+								<ul>
+									<li>Premier élément</li>
+									<li>Deuxième élément</li>
+									<li>Troisième élément</li>
+								</ul>
+							</div>
+						</div>
+						<p class="tag-tip">
+							<code>&lt;ul&gt;</code> = liste non ordonnée,
+							<code>&lt;li&gt;</code> = élément de liste
+						</p>
+					</div>
 
-                <div class="tag-category">
-                    <h3>🖼️ Images</h3>
-                    <div class="tag-demo">
-                        <div class="tag-code">
-                            <pre><code>&lt;img src="photo.jpg" 
+					<div class="tag-category">
+						<h3>🖼️ Images</h3>
+						<div class="tag-demo">
+							<div class="tag-code">
+								<pre><code>&lt;img src="photo.jpg" 
      alt="Description de l'image"
      width="300"&gt;</code></pre>
-                        </div>
-                        <div class="tag-result">
-                            <div class="img-placeholder">
-                                <span>🖼️</span>
-                                <span>Image (300px)</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="tag-tip"><code>src</code> = chemin vers l'image, <code>alt</code> = description</p>
-                </div>
+							</div>
+							<div class="tag-result">
+								<div class="img-placeholder">
+									<span>🖼️</span>
+									<span>Image (300px)</span>
+								</div>
+							</div>
+						</div>
+						<p class="tag-tip">
+							<code>src</code> = chemin vers l'image, <code>alt</code> =
+							description
+						</p>
+					</div>
 
-                <div class="tag-category">
-                    <h3>🔗 Liens</h3>
-                    <div class="tag-demo">
-                        <div class="tag-code">
-                            <pre><code>&lt;a href="page2.html"&gt;
+					<div class="tag-category">
+						<h3>🔗 Liens</h3>
+						<div class="tag-demo">
+							<div class="tag-code">
+								<pre><code>&lt;a href="page2.html"&gt;
   Aller vers la page 2
 &lt;/a&gt;</code></pre>
-                        </div>
-                        <div class="tag-result">
-                            <a href="#" class="demo-link">Aller vers la page 2</a>
-                        </div>
-                    </div>
-                    <p class="tag-tip"><code>href</code> = destination du lien</p>
-                </div>
-            </div>
+							</div>
+							<div class="tag-result">
+								<a href="#" class="demo-link">Aller vers la page 2</a>
+							</div>
+						</div>
+						<p class="tag-tip"><code>href</code> = destination du lien</p>
+					</div>
+				</div>
 
-            <div class="attributes-concept">
-                <h3>🔖 Les attributs</h3>
-                <p>Les attributs donnent des <strong>informations supplémentaires</strong> aux balises</p>
-                
-                <div class="attribute-anatomy">
-                    <div class="anatomy-part tag-name">&lt;img</div>
-                    <div class="anatomy-part attribute">src="photo.jpg"</div>
-                    <div class="anatomy-part attribute">alt="Ma photo"</div>
-                    <div class="anatomy-part attribute">width="200"</div>
-                    <div class="anatomy-part tag-end">&gt;</div>
-                </div>
-                
-                <div class="anatomy-labels">
-                    <div class="label">Balise</div>
-                    <div class="label">Attribut 1</div>
-                    <div class="label">Attribut 2</div>
-                    <div class="label">Attribut 3</div>
-                    <div class="label">Fin</div>
-                </div>
-            </div>
-        </section>
+				<div class="attributes-concept">
+					<h3>🔖 Les attributs</h3>
+					<p>
+						Les attributs donnent des
+						<strong>informations supplémentaires</strong> aux balises
+					</p>
 
-        <section id="pratique-time" class="content-section practice-section">
-            <div class="section-header">
-                <h2>⚡ À vous de jouer !</h2>
-                <span class="duration">45 min</span>
-            </div>
-            
-            <div class="activity-card">
-                <div class="activity-header">
-                    <h3>🎯 Activité 2 : Structurer du contenu</h3>
-                    <div class="activity-time">45 min</div>
-                </div>
-                
-                <div class="activity-content">
-                    <p>Vous allez améliorer votre page web en ajoutant de nouvelles balises et en organisant mieux le contenu.</p>
-                    
-                    <div class="activity-goals-grid">
-                        <div class="goal-item">
-                            <div class="goal-icon">📝</div>
-                            <h4>Structurer avec des titres</h4>
-                            <p>Utiliser h1, h2, h3 correctement</p>
-                        </div>
-                        
-                        <div class="goal-item">
-                            <div class="goal-icon">📋</div>
-                            <h4>Créer des listes</h4>
-                            <p>Utiliser &lt;ul&gt; et &lt;li&gt;</p>
-                        </div>
-                        
-                        <div class="goal-item">
-                            <div class="goal-icon">🖼️</div>
-                            <h4>Ajouter une image</h4>
-                            <p>Utiliser &lt;img&gt; avec attributs</p>
-                        </div>
-                        
-                        <div class="goal-item">
-                            <div class="goal-icon">🔗</div>
-                            <h4>Insérer des liens</h4>
-                            <p>Utiliser &lt;a href&gt;</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="activity-preview">
-                    <h4>Aperçu de ce que vous allez créer :</h4>
-                    <div class="preview-mockup">
-                        <div class="mockup-title">Mon Portfolio Personnel</div>
-                        <div class="mockup-section">À propos de moi</div>
-                        <div class="mockup-content">Paragraphe de présentation...</div>
-                        <div class="mockup-section">Mes compétences</div>
-                        <div class="mockup-list">• Compétence 1<br>• Compétence 2<br>• Compétence 3</div>
-                        <div class="mockup-section">Ma photo</div>
-                        <div class="mockup-image">🖼️ Photo de profil</div>
-                        <div class="mockup-link">🔗 Mon site préféré</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="tools-reminder">
-                <h4>🔧 Outils et ressources :</h4>
-                <ul>
-                    <li>Votre fichier index.html de la séance 1</li>
-                    <li>Une photo au format JPG ou PNG (optionnel)</li>
-                    <li>La fiche activité détaillée</li>
-                </ul>
-            </div>
-        </section>
-    </main>
+					<div class="attribute-anatomy">
+						<div class="anatomy-part tag-name">&lt;img</div>
+						<div class="anatomy-part attribute">src="photo.jpg"</div>
+						<div class="anatomy-part attribute">alt="Ma photo"</div>
+						<div class="anatomy-part attribute">width="200"</div>
+						<div class="anatomy-part tag-end">&gt;</div>
+					</div>
 
-    <footer class="course-footer">
-        <div class="session-recap">
-            <h3>📚 À retenir de cette séance :</h3>
-            <ul>
-                <li>HTML permet de structurer l'information</li>
-                <li>Respecter la hiérarchie des titres (h1 → h2 → h3)</li>
-                <li>Les attributs donnent des infos supplémentaires</li>
-                <li>Nouvelles balises : ul/li, img, a</li>
-            </ul>
-        </div>
-        <div class="next-session">
-            <p>Prochaine séance : <strong>Introduction au CSS</strong></p>
-        </div>
-    </footer>
-</body>
+					<div class="anatomy-labels">
+						<div class="label">Balise</div>
+						<div class="label">Attribut 1</div>
+						<div class="label">Attribut 2</div>
+						<div class="label">Attribut 3</div>
+						<div class="label">Fin</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="pratique-time" class="content-section practice-section">
+				<div class="section-header">
+					<h2>⚡ À vous de jouer !</h2>
+					<span class="duration">45 min</span>
+				</div>
+
+				<div class="activity-card">
+					<div class="activity-header">
+						<h3>🎯 Activité 2 : Structurer du contenu</h3>
+						<div class="activity-time">45 min</div>
+					</div>
+
+					<div class="activity-content">
+						<p>
+							Vous allez améliorer votre page web en ajoutant de nouvelles
+							balises et en organisant mieux le contenu.
+						</p>
+
+						<div class="activity-goals-grid">
+							<div class="goal-item">
+								<div class="goal-icon">📝</div>
+								<h4>Structurer avec des titres</h4>
+								<p>Utiliser h1, h2, h3 correctement</p>
+							</div>
+
+							<div class="goal-item">
+								<div class="goal-icon">📋</div>
+								<h4>Créer des listes</h4>
+								<p>Utiliser &lt;ul&gt; et &lt;li&gt;</p>
+							</div>
+
+							<div class="goal-item">
+								<div class="goal-icon">🖼️</div>
+								<h4>Ajouter une image</h4>
+								<p>Utiliser &lt;img&gt; avec attributs</p>
+							</div>
+
+							<div class="goal-item">
+								<div class="goal-icon">🔗</div>
+								<h4>Insérer des liens</h4>
+								<p>Utiliser &lt;a href&gt;</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="activity-preview">
+						<h4>Aperçu de ce que vous allez créer :</h4>
+						<div class="preview-mockup">
+							<div class="mockup-title">Mon Portfolio Personnel</div>
+							<div class="mockup-section">À propos de moi</div>
+							<div class="mockup-content">Paragraphe de présentation...</div>
+							<div class="mockup-section">Mes compétences</div>
+							<div class="mockup-list">
+								• Compétence 1<br />• Compétence 2<br />• Compétence 3
+							</div>
+							<div class="mockup-section">Ma photo</div>
+							<div class="mockup-image">🖼️ Photo de profil</div>
+							<div class="mockup-link">🔗 Mon site préféré</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="tools-reminder">
+					<h4>🔧 Outils et ressources :</h4>
+					<ul>
+						<li>Votre fichier index.html de la séance 1</li>
+						<li>Une photo au format JPG ou PNG (optionnel)</li>
+						<li>La fiche activité détaillée</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+		<footer class="course-footer">
+			<div class="session-recap">
+				<h3>📚 À retenir de cette séance :</h3>
+				<ul>
+					<li>HTML permet de structurer l'information</li>
+					<li>Respecter la hiérarchie des titres (h1 → h2 → h3)</li>
+					<li>Les attributs donnent des infos supplémentaires</li>
+					<li>Nouvelles balises : ul/li, img, a</li>
+				</ul>
+			</div>
+			<div class="next-session">
+				<p>Prochaine séance : <strong>Introduction au CSS</strong></p>
+			</div>
+		</footer>
+	</body>
 </html>
