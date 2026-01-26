@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNT 2GT - Séance 4 : CSS - Mise en forme avancée</title>
+    <link rel="stylesheet" href="style_cours_seance4.css">
+</head>
+<body>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+		<a href="index.html" class="btn-home">
+			<i data-lucide="home"></i>
+			<span>Accueil</span>
+		</a>
+
+		<script>
+			lucide.createIcons();
+		</script>
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="title-main">CSS - Mise en forme avancée</h1>
+            <div class="session-info">
+                <span class="session-number">Séance 4/8</span>
+                <span class="session-title">Layout et design professionnel</span>
+            </div>
+        </div>
+        <div class="level-badge">2nde GT - SNT</div>
+    </header>
+
+    <div class="time-indicator">
+        <span class="time-course">📚 Cours : 15 min</span>
+        <span class="time-practice">⚡ Pratique : 45 min</span>
+    </div>
+
+    <main class="course-content">
+        <section id="advanced-layout" class="content-section">
+            <div class="section-header">
+                <h2>📐 Mise en page moderne</h2>
+                <span class="duration">8 min</span>
+            </div>
+            
+            <div class="layout-concepts">
+                <h3>🏗️ Le modèle de boîte (Box Model)</h3>
+                <div class="box-model-demo">
+                    <div class="box-layers">
+                        <div class="content-layer">Contenu</div>
+                        <div class="padding-layer">Padding (rembourrage)</div>
+                        <div class="border-layer">Border (bordure)</div>
+                        <div class="margin-layer">Margin (marge)</div>
+                    </div>
+                    
+                    <div class="box-explanation">
+                        <div class="explanation-item">
+                            <div class="color-sample content"></div>
+                            <div>
+                                <strong>Contenu :</strong> Texte, image, etc.
+                            </div>
+                        </div>
+                        <div class="explanation-item">
+                            <div class="color-sample padding"></div>
+                            <div>
+                                <strong>Padding :</strong> Espace intérieur
+                            </div>
+                        </div>
+                        <div class="explanation-item">
+                            <div class="color-sample border"></div>
+                            <div>
+                                <strong>Border :</strong> Contour de l'élément
+                            </div>
+                        </div>
+                        <div class="explanation-item">
+                            <div class="color-sample margin"></div>
+                            <div>
+                                <strong>Margin :</strong> Espace extérieur
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spacing-examples">
+                    <h4>Exemples d'espacement :</h4>
+                    <div class="spacing-demo">
+                        <div class="demo-box no-spacing">Pas d'espacement</div>
+                        <div class="demo-box with-padding">Avec padding</div>
+                        <div class="demo-box with-margin">Avec margin</div>
+                        <div class="demo-box with-both">Padding + margin</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modern-properties">
+                <h3>🌟 Propriétés modernes</h3>
+                <div class="properties-grid">
+                    <div class="property-showcase">
+                        <h4>Bordures arrondies</h4>
+                        <div class="demo-rounded">
+                            <div class="rounded-demo small">border-radius: 5px</div>
+                            <div class="rounded-demo medium">border-radius: 15px</div>
+                            <div class="rounded-demo large">border-radius: 25px</div>
+                        </div>
+                    </div>
+                    
+                    <div class="property-showcase">
+                        <h4>Ombres</h4>
+                        <div class="demo-shadows">
+                            <div class="shadow-demo light">Ombre légère</div>
+                            <div class="shadow-demo medium">Ombre moyenne</div>
+                            <div class="shadow-demo strong">Ombre forte</div>
+                        </div>
+                    </div>
+                    
+                    <div class="property-showcase">
+                        <h4>Dégradés</h4>
+                        <div class="demo-gradients">
+                            <div class="gradient-demo blue">Dégradé bleu</div>
+                            <div class="gradient-demo sunset">Dégradé coucher de soleil</div>
+                            <div class="gradient-demo nature">Dégradé nature</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="responsive-design" class="content-section">
+            <div class="section-header">
+                <h2>📱 Design adaptatif</h2>
+                <span class="duration">7 min</span>
+            </div>
+            
+            <div class="responsive-concept">
+                <h3>Pourquoi s'adapter aux écrans ?</h3>
+                <div class="devices-showcase">
+                    <div class="device desktop">
+                        <div class="screen">🖥️</div>
+                        <div class="device-label">Ordinateur<br><small>1920px</small></div>
+                    </div>
+                    <div class="device tablet">
+                        <div class="screen">📱</div>
+                        <div class="device-label">Tablette<br><small>768px</small></div>
+                    </div>
+                    <div class="device mobile">
+                        <div class="screen">📱</div>
+                        <div class="device-label">Téléphone<br><small>375px</small></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flexbox-intro">
+                <h3>🔧 Flexbox : Organisation facile</h3>
+                <div class="flex-demos">
+                    <div class="flex-example">
+                        <h4>display: flex;</h4>
+                        <div class="flex-container horizontal">
+                            <div class="flex-item">1</div>
+                            <div class="flex-item">2</div>
+                            <div class="flex-item">3</div>
+                        </div>
+                        <p>Éléments côte à côte</p>
+                    </div>
+                    
+                    <div class="flex-example">
+                        <h4>justify-content: center;</h4>
+                        <div class="flex-container centered">
+                            <div class="flex-item">1</div>
+                            <div class="flex-item">2</div>
+                            <div class="flex-item">3</div>
+                        </div>
+                        <p>Éléments centrés</p>
+                    </div>
+                    
+                    <div class="flex-example">
+                        <h4>justify-content: space-between;</h4>
+                        <div class="flex-container spaced">
+                            <div class="flex-item">1</div>
+                            <div class="flex-item">2</div>
+                            <div class="flex-item">3</div>
+                        </div>
+                        <p>Éléments espacés</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pratique-time" class="content-section practice-section">
+            <div class="section-header">
+                <h2>⚡ À vous de jouer !</h2>
+                <span class="duration">45 min</span>
+            </div>
+            
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3>🎯 Activité 4 : Une page stylée</h3>
+                    <div class="activity-time">45 min</div>
+                </div>
+                
+                <div class="activity-content">
+                    <p>Vous allez transformer votre portfolio en utilisant les techniques avancées de CSS !</p>
+                    
+                    <div class="activity-objectives">
+                        <div class="objective-card">
+                            <div class="objective-icon">📐</div>
+                            <h4>Maîtriser le spacing</h4>
+                            <p>Padding, margin, bordures</p>
+                        </div>
+                        
+                        <div class="objective-card">
+                            <div class="objective-icon">🎨</div>
+                            <h4>Effets visuels</h4>
+                            <p>Ombres, arrondis, dégradés</p>
+                        </div>
+                        
+                        <div class="objective-card">
+                            <div class="objective-icon">📱</div>
+                            <h4>Layout moderne</h4>
+                            <p>Flexbox et organisation</p>
+                        </div>
+                        
+                        <div class="objective-card">
+                            <div class="objective-icon">🌈</div>
+                            <h4>Design cohérent</h4>
+                            <p>Couleurs et typographie</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="before-after-showcase">
+                    <h4>🔄 Transformation attendue :</h4>
+                    <div class="comparison-demo">
+                        <div class="demo-before">
+                            <h5>Version actuelle</h5>
+                            <div class="mock-page basic">
+                                <div class="mock-title">Portfolio de Marie</div>
+                                <div class="mock-section">À propos de moi</div>
+                                <div class="mock-text">• Élève en 2nde GT<br>• Passionnée d'informatique</div>
+                                <div class="mock-section">Mes projets</div>
+                                <div class="mock-text">Créer un site web...</div>
+                            </div>
+                        </div>
+                        
+                        <div class="transformation-icon">🎨</div>
+                        
+                        <div class="demo-after">
+                            <h5>Version stylée</h5>
+                            <div class="mock-page styled">
+                                <div class="mock-header">Portfolio de Marie</div>
+                                <div class="mock-card">
+                                    <div class="mock-card-title">À propos de moi</div>
+                                    <div class="mock-card-content">• Élève en 2nde GT<br>• Passionnée d'informatique</div>
+                                </div>
+                                <div class="mock-card">
+                                    <div class="mock-card-title">Mes projets</div>
+                                    <div class="mock-card-content">Créer un site web...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="css-advanced-cheatsheet">
+                <h4>🎯 Nouvelles propriétés à découvrir :</h4>
+                <div class="advanced-properties-grid">
+                    <div class="cheat-card">
+                        <code>margin: 20px;</code>
+                        <span>Espace extérieur</span>
+                    </div>
+                    <div class="cheat-card">
+                        <code>padding: 15px;</code>
+                        <span>Espace intérieur</span>
+                    </div>
+                    <div class="cheat-card">
+                        <code>border-radius: 10px;</code>
+                        <span>Coins arrondis</span>
+                    </div>
+                    <div class="cheat-card">
+                        <code>box-shadow: 0 2px 5px gray;</code>
+                        <span>Ombre portée</span>
+                    </div>
+                    <div class="cheat-card">
+                        <code>display: flex;</code>
+                        <span>Layout flexible</span>
+                    </div>
+                    <div class="cheat-card">
+                        <code>justify-content: center;</code>
+                        <span>Centrage horizontal</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="course-footer">
+        <div class="session-recap">
+            <h3>📚 À retenir de cette séance :</h3>
+            <ul>
+                <li>Box model : margin, padding, border</li>
+                <li>Effets : border-radius, box-shadow</li>
+                <li>Flexbox : display: flex, justify-content</li>
+                <li>Organisation moderne du layout</li>
+            </ul>
+        </div>
+        <div class="next-session">
+            <p>Prochaine séance : <strong>Liens et navigation</strong></p>
+        </div>
+    </footer>
+</body>
+</html>
